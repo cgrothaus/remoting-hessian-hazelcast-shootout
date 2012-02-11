@@ -1,5 +1,7 @@
 package com.lr.playground.remotingshootout.hessian_hazelcast_shootout_client;
 
+import javax.annotation.PostConstruct;
+
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,10 +23,12 @@ public class TestClient
 		this.hashingService = hashingService;
 	}
 	
+	@PostConstruct
 	public void runTest() throws HashingServiceBusinessException {
 		runTest1();
 		runTest2();
 		runTest3();
+		runTest4();
 	}
 
 	private void runTest1()
@@ -67,12 +71,29 @@ public class TestClient
 	{
 		try
 		{
-			hashingService.hash(DataClass.CAUSES_EXCEPTION);
-			System.err.println("runTest3() failed! HashingServiceBusinessException was expected!");
+			DataClass d = TestDataPool.generateRandomFivePack();
+			DataClass result = hashingService.hash(d);
+			Assert.assertTrue(result.getCalculatedHashcode() != 0);
+			System.out.println("runTest3() succeeded!");
 		}
 		catch (HashingServiceBusinessException e)
 		{
-			System.out.println("runTest3() succeeded!");
+			System.err.println("runTest3() failed!");
+			e.printStackTrace();
+		}
+	}
+	
+	private void runTest4()
+	{
+		try
+		{
+			hashingService.hash(DataClass.CAUSES_EXCEPTION);
+			System.err.println("runTest4() failed! HashingServiceBusinessException was expected!");
+		}
+		catch (HashingServiceBusinessException e)
+		{
+			Assert.assertEquals("I was told to throw up", e.getMessage());
+			System.out.println("runTest4() succeeded!");
 			// exception was expected
 		}
 	}
