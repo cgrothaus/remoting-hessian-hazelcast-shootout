@@ -25,7 +25,7 @@
   		<artifactId>spring-web</artifactId>
   		<version>3.0.5.RELEASE</version>
   		<type>jar</type>
-  		<scope>compile</scope>
+  		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>com.lr.playground.remoting-shootout</groupId>
@@ -33,6 +33,20 @@
   		<version>0.0.1-SNAPSHOT</version>
   		<type>jar</type>
   		<scope>compile</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-webmvc</artifactId>
+  		<version>3.0.5.RELEASE</version>
+  		<type>jar</type>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.caucho</groupId>
+  		<artifactId>hessian</artifactId>
+  		<version>4.0.7</version>
+  		<type>jar</type>
+  		<scope>runtime</scope>
   	</dependency>
   </dependencies>
   <build>

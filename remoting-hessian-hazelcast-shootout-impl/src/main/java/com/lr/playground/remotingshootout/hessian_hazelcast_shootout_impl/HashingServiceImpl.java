@@ -1,9 +1,16 @@
 package com.lr.playground.remotingshootout.hessian_hazelcast_shootout_impl;
 
+import org.springframework.stereotype.Service;
+
 import com.lr.playground.remotingshootout.hessian_hazelcast_shootout_api.*;
 
+@Service
 public class HashingServiceImpl implements HashingService
 {
+	
+	public HashingServiceImpl() {
+		System.out.println("HashingServiceImpl is starting...");
+	}
 
 	public DataClass hash(DataClass data) throws HashingServiceBusinessException
 	{
