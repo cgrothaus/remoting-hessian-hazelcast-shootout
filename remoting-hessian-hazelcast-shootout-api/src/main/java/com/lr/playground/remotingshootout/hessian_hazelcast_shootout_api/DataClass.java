@@ -9,6 +9,7 @@ public class DataClass implements Serializable
 	private static final long serialVersionUID = 1L;
 	
 	public static final DataClass EMPTY = new DataClass("", "", "", "", "");
+	public static final DataClass CAUSES_EXCEPTION = new DataClass("exception", "", "", "", "");
 	
 	private final String string1;
 	private final String string2;
