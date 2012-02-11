@@ -21,14 +21,21 @@ public class DataClass implements Serializable
 			Map<String, DataClass> mappedChildren)
 	{
 		super();
-		this.string1 = string1;
-		this.string2 = string2;
-		this.string3 = string3;
-		this.string4 = string4;
-		this.string5 = string5;
+		this.string1 = string1 != null ? string1 : "";
+		this.string2 = string2 != null ? string2 : "";
+		this.string3 = string3 != null ? string3 : "";
+		this.string4 = string4 != null ? string4 : "";
+		this.string5 = string5 != null ? string5 : "";
 		
 		this.listChildren = new ArrayList<DataClass>(listChildren);
 		this.mappedChildren = new HashMap<String, DataClass>(mappedChildren);
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		// TODO Auto-generated method stub
+		return super.hashCode();
 	}
 
 	public String getString1()
