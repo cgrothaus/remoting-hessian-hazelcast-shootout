@@ -1,4 +1,6 @@
-package com.lr.playground.remotingshootout.hessian_hazelcast_shootout_api;
+package com.lr.playground.remotingshootout.hessian_hazelcast_shootout_impl;
+
+import com.lr.playground.remotingshootout.hessian_hazelcast_shootout_api.*;
 
 public class HashingServiceImpl implements HashingService
 {
