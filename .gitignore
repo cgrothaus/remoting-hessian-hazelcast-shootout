@@ -12,3 +12,7 @@
 /remoting-hessian-hazelcast-shootout-server/target
 /remoting-hessian-hazelcast-shootout-server/.classpath
 /remoting-hessian-hazelcast-shootout-server/.project
+/remoting-hessian-hazelcast-shootout-client/.classpath
+/remoting-hessian-hazelcast-shootout-client/.settings
+/remoting-hessian-hazelcast-shootout-client/target
+/remoting-hessian-hazelcast-shootout-client/.project
