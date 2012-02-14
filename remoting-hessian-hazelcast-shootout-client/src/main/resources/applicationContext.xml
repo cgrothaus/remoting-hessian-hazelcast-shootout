@@ -15,5 +15,6 @@
 		<property name="serviceUrl"
 			value="http://localhost:8080/remoting-hessian-hazelcast-shootout-server/remoting/HashingService" />
 		<property name="serviceInterface" value="com.lr.playground.remotingshootout.hessian_hazelcast_shootout_api.HashingService" />
+		<property name="readTimeout" value="60000" />
 	</bean>
 </beans>
